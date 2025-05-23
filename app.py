@@ -10,7 +10,7 @@ import hashlib
 
 # Page configuration
 st.set_page_config(
-    page_title="TraceName - Advanced Username & Name Intelligence",
+    page_title="NameTrace - Advanced Username & Name Intelligence",
     page_icon="🎯",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -685,7 +685,7 @@ def check_username(query, platform_name, platform_info, search_type="username"):
 
 def main():
     # Header
-    st.markdown('<h1 class="main-header">🎯 TraceName</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🎯 NameTrace</h1>', unsafe_allow_html=True)
     st.markdown('<p class="subtitle">Advanced Username & Name Intelligence Platform</p>', unsafe_allow_html=True)
     
     # Stats display
@@ -923,7 +923,7 @@ def main():
                         st.download_button(
                             "📄 Download CSV Report",
                             csv_data,
-                            f"tracename_{query.replace(' ', '_')}_{int(time.time())}.csv",
+                            f"NameTrace_{query.replace(' ', '_')}_{int(time.time())}.csv",
                             "text/csv"
                         )
                     with col2:
@@ -931,7 +931,7 @@ def main():
                         st.download_button(
                             "📋 Download JSON Report", 
                             json_data,
-                            f"tracename_{query.replace(' ', '_')}_{int(time.time())}.json",
+                            f"NameTrace_{query.replace(' ', '_')}_{int(time.time())}.json",
                             "application/json"
                         )
                         
