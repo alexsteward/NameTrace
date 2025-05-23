@@ -740,7 +740,7 @@ def main():
                 help="Enter the person's real name to search across platforms"
             )
         
-        # Filter options
+# Filter options
         col_filter1, col_filter2 = st.columns(2)
         with col_filter1:
             hide_not_found = st.checkbox("Hide Not Found", value=True, help="Hide platforms where no profile was found")
@@ -756,6 +756,8 @@ def main():
         # Input validation
         if search_type == "Username":
             if not re.match(r'^[a-zA-Z0-9._-]+$', query) or len(query) > 50:
+                st.error("Invalid username format")
+                return
         else:
             if len(query) > 100 or len(query) < 2:
                 st.error("Invalid name format")
